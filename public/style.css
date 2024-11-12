@@ -1,0 +1,166 @@
+/* Style de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Couleur de fond sombre */
+    color: #E0E0E0; /* Texte en gris clair pour un bon contraste */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1E1E1E; /* Fond gris foncé */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+/* Style des titres */
+h1, h2, h3 {
+    text-align: center;
+    color: #FFFFFF; /* Blanc pour les titres */
+}
+
+/* Input et boutons */
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Input */
+input {
+    background-color: #2A2A2A; /* Fond gris plus foncé pour les inputs */
+    color: #E0E0E0;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50; /* Vert léger pour le focus */
+}
+
+/* Boutons */
+button {
+    background-color: #4CAF50; /* Vert sobre pour les boutons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3A9F4A; /* Vert légèrement plus foncé au survol */
+}
+
+/* Message d'erreur */
+#errorMessage {
+    color: #FF6B6B; /* Rouge clair pour les messages d'erreur */
+    text-align: center;
+}
+
+/* Cartes utilisateur */
+.user-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.user-card {
+    width: 220px;
+    padding: 20px;
+    background-color: #1E1E1E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.user-card:hover {
+    transform: scale(1.05); /* Agrandissement au survol */
+}
+
+.user-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #FFFFFF; /* Titres en blanc */
+}
+
+.user-card p {
+    color: #B0B0B0; /* Texte secondaire en gris clair */
+}
+
+.user-card button {
+    width: 90%;
+    padding: 10px;
+    background-color: #555555; /* Boutons gris sur la carte */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.user-card button:hover {
+    background-color: #777777;
+}
+
+/* Formulaires de recherche et d'ajout */
+#searchForm, #addUserForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #1E1E1E;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput {
+    background-color: #2A2A2A;
+    color: #E0E0E0;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#addUserForm label, #searchForm label {
+    color: #E0E0E0;
+}
+
+/* Bouton de déconnexion */
+#logoutButton {
+    background-color: #FF6B6B; /* Rouge pour la déconnexion */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#logoutButton:hover {
+    background-color: #FF4C4C; /* Rouge légèrement plus foncé */
+}
+
+/* Panneau admin */
+#adminPanel {
+    display: none; /* Masqué par défaut, visible si admin */
+    margin-top: 20px;
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Adaptation mobile */
+@media (max-width: 600px) {
+    .container, .user-card, #addUserForm, #searchForm {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

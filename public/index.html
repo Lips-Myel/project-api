@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API User Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion des utilisateurs</h1>
+
+        <!-- Formulaire de connexion -->
+        <div id="loginForm">
+            <h2>Connexion</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button id="loginButton">Se connecter</button>
+            <p id="loginMessage"></p>
+        </div>
+
+        <!-- Panel Admin (Masqué par défaut) -->
+        <div id="adminPanel" style="display: none;">
+            <!-- Bouton de déconnexion -->
+            <button id="logoutButton">Déconnexion</button>
+        
+           
+
+            <!-- Formulaire d'ajout d'utilisateur -->
+            <form id="addUserForm">
+                <input type="text" id="newUserName" placeholder="Nom" required>
+                <input type="email" id="newUserEmail" placeholder="Email" required>
+                <input type="password" id="newUserPassword" placeholder="Mot de passe" required>
+                <input type="number" id="newUserAge" placeholder="Âge" required> <!-- Champ pour l'âge -->
+                <label>
+                    <input type="checkbox" id="newUserIsAdmin"> Admin
+                </label>
+                <button type="submit">Ajouter l'utilisateur</button>
+            </form>
+             <!-- Formulaire de recherche -->
+         <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Rechercher par nom ou email">
+            <button type="submit">Rechercher</button>
+        </form>
+        <div id="usersearchList"></div>
+            <!-- Section des cartes d'utilisateurs -->
+            <div id="userList" class="user-cards-container"></div>
+        </div>
+        
+
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>

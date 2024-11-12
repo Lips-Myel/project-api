@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/wamp64/www/project-api-main/
+      - /wamp64/www/project-api-main/node_modules
+    networks:
+      - project-api
+
+networks:
+  project-api:
+    driver: bridge
